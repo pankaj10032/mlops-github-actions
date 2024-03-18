@@ -19,7 +19,7 @@ jobs:
 
       - name: Hello world
         run: echo "Hello world"
-        shell: cmd
+        # shell: cmd
         # for linux or ubuntu shell is bash
 # we can also have the multiple jobs inside the each workflow
   goodbye:
@@ -27,5 +27,5 @@ jobs:
     steps:
       - name: Goodbye world
         run: echo "Goodbye world"
-        shell: cmd
+        # shell: cmd
 
