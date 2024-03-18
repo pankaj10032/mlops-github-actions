@@ -21,7 +21,6 @@ jobs:
         run: echo "Hello world"
         shell: bash
 # we can also have the multiple jobs inside the each workflow
-
   goodbye:
     runs-on: windows
     steps:
