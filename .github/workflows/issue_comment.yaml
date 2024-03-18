@@ -1,1 +1,14 @@
+name: create a comment on new issue
+# run only when we have the issue
+on:
+  issues:
+    types: [opened]
 
+jobs:
+  comment-with-action:
+    runs-on: windows
+    steps:
+      # to make a comment on newly create issue we have the requirement of the issue
+      - name: "dump github context"
+        run:  echo '$ {{ toJSON(github.event) }}' | jq
+        shell: cmd
