@@ -19,12 +19,13 @@ jobs:
 
       - name: Hello world
         run: echo "Hello world"
-        shell: bash
+        shell: cmd
+        # for linux or ubuntu shell is bash
 # we can also have the multiple jobs inside the each workflow
   goodbye:
     runs-on: windows
     steps:
       - name: Goodbye world
         run: echo "Goodbye world"
-        shell: bash
+        shell: cmd
 
