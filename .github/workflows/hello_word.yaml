@@ -1,29 +1,31 @@
 name: Hello world workflow
-
+# publich repo contain the source of the actions and v2 is the version of the action
+      # we can also create our own actions and also publish them
 on:
   push:
     branches:
-      -main
+      - main
   pull_request:
     branches:
-      -main
+      - main
   workflow_dispatch:
 
 jobs:
   hello:
     runs-on: windows
     steps:
-      -uses: actions/checkout@v2 # publich repo contain the source of the actions and v2 is the version of the action
-      # we can also create our own actions and also publish them
-      -name: hello world
-       run: echo "Hello world"
-       shell: bash
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Hello world
+        run: echo "Hello world"
+        shell: bash
 # we can also have the multiple jobs inside the each workflow
 
-goodbye:
-  runs-on: windows
-  steps:
-    -name: goodbye world
-     run: echo"Hello world"
-     shell: bash
+  goodbye:
+    runs-on: windows
+    steps:
+      - name: Goodbye world
+        run: echo "Goodbye world"
+        shell: bash
 
